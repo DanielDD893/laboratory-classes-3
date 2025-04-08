@@ -1,0 +1,13 @@
+<nav class="navigation">
+    <% if (menuLinks && menuLinks.length > 0) { %>
+        <ul class="navigation__list">
+            <% menuLinks.forEach(link => { %>
+                <li class="navigation__list">
+                    <a href="<%= link.path %>" class="navigation__link<%= activeLinkPath === link.path ? ' navigation__link--active' : '' %>">
+                        <%= link.label %>
+                    </a>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
+</nav>
