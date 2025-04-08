@@ -10,7 +10,7 @@ const renderNewProductPage = require("../views/renderNewProductPage");
 const router = express.Router();
 
 router.get("/add", (_request, response) => {
-  response.sendFile(path.join(__dirname, "../views", "add-product.html"));
+  response.sendFile(path.join(__dirname, "../views", "add-product.ejs"));
 });
 
 router.post("/add", (request, response) => {

@@ -1,0 +1,16 @@
+<%- include('partials/header', { headTitle: headTitle }) %>
+<%- include('partials/menu', { menuLinks: menuLinks, activeLinkPath: activeLinkPath }) %>
+
+<h1 class="heading"><%= headTitle %></h1>
+
+<% if (data && data.length) { %>
+  <ul>
+    <% data.forEach(item => { %>
+      <li><%= item.name %> - <%= item.price %></li>
+    <% }) %>
+  </ul>
+<% } else { %>
+  <p>Brak produktów do wyświetlenia.</p>
+<% } %>
+
+<%- include('partials/footer') %>
